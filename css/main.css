@@ -1,0 +1,140 @@
+/* COMMON */
+body{
+  height:3000px;/* 임시임시임시임시임시 */
+color:#333;
+font-size:16px;
+font-weight:400;
+line-height:1.4;
+font-family: 'Nanum Gothic', sans-serif;
+}
+img{
+  display:block;
+}
+a{
+  text-decoration:none;
+}
+.inner{width:1100px;margin:0 auto;position:relative;}
+
+.btn {width:130px;padding:10px;border: 2px solid #333;border-radius:4px;color:#333;font-size:16px;font-weight:700;text-align:center;cursor:pointer;box-sizing: border-box;display:block;transition:.4s;}
+.btn:hover{background-color:#333;color:#fff;}
+.btn .btn--reverse {background-color:#333;color:#fff;}
+/* 밑에 reverse:hover는 효과에서 다시 원래의 모습으로 돌아가는 효과를줌 */
+.btn .btn--reverse:hover{background-color:transparent;color:#333;}
+
+
+.btn .btn--brown {color:#592B18;border-color:#592B18;}
+.btn .btn--brown:hover {color:#fff;background-color:#592B18;}
+
+
+.btn .btn--gold {color:#D9AA8A;border-color:#D9AA8A;}
+.btn .btn--gold:hover {color:#fff;background-color:#D9AA8A;}
+
+
+.btn .btn--white {color:#fff;border-color:#fff;}
+.btn .btn--white:hover {color:#333;background-color:#fff;}
+
+/* HEADER */
+header{z-index:9;background-color:#f6f5f0;border-bottom:1px solid #c8c8c8;position:fixed;top:0;width:100%;}
+header > .inner{height:120px;}
+header .inner .logo{ height:75px;position:absolute;top:0;bottom:0;left:0;margin:auto;}
+header .inner .sub-menu {display:flex;position:absolute;top:10px;right:2px;}
+header .inner .sub-menu .menu{display:flex;font-family:arial, sans-serif;}
+header .inner .sub-menu .menu li{position:relative;}
+header .inner .sub-menu .menu li::before{ content:"";width:1px; height:12px;background-color:#e5e5e5; position:absolute;bottom:0;top:0;margin:auto 0;}
+header .inner .sub-menu .menu li:first-child::before{display:none;}
+header .inner .sub-menu .menu li a{font-size:12px;padding:11px 16px;display:block;text-decoration:none;color:#656565;}
+header .inner .sub-menu .menu li a:hover {color:#000;}
+
+
+header .inner .sub-menu .search{position:relative;height:34px;}
+header .inner .sub-menu .search input{transition:width 0.4s;font-size:12px;background-color:#fff;outline:none;width:36px;height:34px;padding:4px 10px;border:1px solid #ccc; box-sizing:border-box;border-radius:5px;color:#777;}
+header .inner .sub-menu .search input:focus{width:190px;border-color:#669900;}
+header .inner .sub-menu .search .material-icons{position:absolute;top:0;bottom:0;margin:auto;height:24px;right:2.5px;transition:.5s;}
+header .inner .sub-menu .search.focused .material-icons{opacity:0;}
+
+header .main-menu{display:flex;position:absolute;bottom:0;right:0;z-index:1;}
+header .main-menu .item{}
+header .main-menu .item .item__name{padding:10px 20px 34px 20px;font-family:Arial, sans-serif;font-size:13px;}
+header .main-menu .item:hover .item__name{background-color:#2c2a29;color:#669900;border-radius:6px 6px 0 0;}
+header .main-menu .item .item__contents{width:100%;position:fixed;left:0;display:none;}
+header .main-menu .item:hover .item__contents{display:block;}
+
+header .main-menu .item .item__contents .contents__menu{background-color:#2c2a29;}
+header .main-menu .item .item__contents .contents__menu > ul {display:flex;padding:20px 0;}
+header .main-menu .item .item__contents .contents__menu > ul > li {width:220px;}
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {padding:3px 0 12px 0;font-size:14px;color:#fff;}
+/* header .main-menu .item .item__contents .contents__menu > ul > li ul {} 사용안함*/
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {padding:5px 0;font-size:12px;color:#999;cursor:pointer;}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover{color:#669900;}
+
+
+header .main-menu .item .item__contents .contents__texture{background-color:pink;height:100px;font-size:12px;padding:26px 0;background-image:url("../images/main_menu_pattern.jpg");}
+/* header .main-menu .item .item__contents .contents__texture .inner{} 사용안함 */
+header .main-menu .item .item__contents .contents__texture .inner h4{color:#999;font-weight:700;font-size:12px;}
+header .main-menu .item .item__contents .contents__texture .inner p{color:#669900;margin:4px 0 14px;}
+
+
+ /* 스크롤 옆 배지관련 부분 */
+header .badges{position:absolute;top:132px;right:12px;}
+header .badges .badge{ border-radius:10px; overflow:hidden;margin-bottom:12px;box-shadow:4px 4px 10px rgba(0,0,0,.15);cursor:pointer;}
+
+/* VISUAL */
+.visual{margin-top:120px;/* header의 높이값 120px */ background-image:url("../images/visual_bg.jpg");background-position:center;}
+
+.visual .inner {height:646px;}
+.visual .title {position:absolute;top:88px;left:-10px;}
+.visual .title .btn {position:absolute;top:259px;left:173px;}
+.visual .cup1.image {position:absolute;bottom:0;right:-47px;}
+.visual .cup1.text {position:absolute;top:38px;right:171px;}
+.visual .cup2.image {position:absolute;bottom:0;right:162px;}
+.visual .cup2.text {position:absolute;top:321px;left:416px;}
+.visual .spoon {position:absolute;bottom:0;left:210px;}
+
+.visual .fade-in{ opacity:0;} /* 안보이게 미리 투명도를 정해놓는다. */
+
+
+
+/* NOTICE */
+.notice{}
+.notice .notice-line{position:relative;}
+.notice .notice-line .bg-left{position:absolute;top:0;left:0;width:50%;height:100%;background-color:#333;}
+.notice .notice-line .bg-right{position:absolute;top:0;right:0;width:50%;height:100%;background-color:#f6f5ef;}
+.notice .notice-line .inner{height:62px;display:flex;}
+.notice .notice-line .inner__left{width:60%;height:100%;background-color:#333;display:flex;align-items: center;}
+.notice .notice-line .inner__left h2{color:#fff;font-size:17px;font-weight:700;margin-right:20px;}
+.notice .notice-line .inner__left .swiper-container{flex-grow:1;height:62px;}
+/* SWIPER슬라이드 스타일 */
+/* .notice .notice-line .inner__left .swiper-container .swiper-wrapper{} */
+.notice .notice-line .inner__left .swiper-container .swiper-wrapper .swiper-slide{height:62px;display:flex;align-items:center;}
+.notice .notice-line .inner__left .swiper-container .swiper-wrapper .swiper-slide a{color:#fff;}
+
+.notice .notice-line .inner__left .notice-line__more {width:62px;height:62px;display:flex;justify-content:center;align-items:center;}
+
+.notice .notice-line .inner__left .notice-line__more .material-icons{color:#fff;font-size:30px;}
+/* 아이콘의 기본사이즈는 24px; */
+
+
+
+.notice .notice-line .inner__right{width:40%;height:100%;display:flex;justify-content:flex-end;align-items:center;}
+.notice .notice-line .inner__right h2{font-size:17px;font-weight:700;}
+.notice .notice-line .inner__right .toggle-promotion{width:62px;height:62px;cursor: pointer;display:flex;justify-content: center;align-items:center;}
+.notice .notice-line .inner__right .toggle-promotion .material-icons{font-size:30px;}
+
+
+
+/* 프로모션 박스 3슬라이드제작 */
+.notice .promotion{height:693px;background-color:#f6f5ef;position:relative;transition:height .4s;overflow:hidden;}
+.notice .promotion.hide /*.promotion.hide 일치선택자로 붙어있는경우를 나타내기위해띄어쓰기 금지*/{height:0;}
+.notice .promotion .swiper-container{width:calc(819px * 3 + 20px);height:553px;position:absolute;top:40px;left:50%;margin-left:calc((819px * 3 + 20px) /-2); }
+.notice .promotion .swiper-slide{opacity: .5; transition:opacity 1s;position:relative;}
+.notice .promotion .swiper-slide-active{opacity: 1;} /* 1로 다시 기본값으로 바꿔주면 흐려졌다가 뚜렷해지며 포커스효과를준다 */
+.notice .promotion .swiper-slide .btn{position:absolute;bottom:0;left:0;right:0;margin:auto;} 
+
+
+.notice .promotion .swiper-pagination {
+  bottom:40px; left:0; right:0;
+}
+/* 슬라이드 이미지밑에  */
+.notice .promotion .swiper-pagination .swiper-pagination-bullet{background-image: url("../images/promotion_slide_pager.png");width:12px; height:12px; margin-right:6px;outline:none;}
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {margin-right:0;}
